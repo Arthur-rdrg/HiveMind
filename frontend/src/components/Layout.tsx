@@ -64,7 +64,10 @@ export default function Layout() {
           >
             <EventosIcon /> Eventos
           </button>
-          <button className={path === "/mentor" ? "ativo" : ""}>
+          <button
+            className={path === "/mentor" ? "ativo" : ""}
+            onClick={() => navigate("/mentor")}
+          >
             <MentorIaIcon /> Mentor IA
           </button>
           <button 
@@ -76,7 +79,10 @@ export default function Layout() {
         </nav>
         
         <div className="sidebar-footer">
-          <button>
+          <button
+            className={path === "/perfil" || path === "/profile" ? "ativo" : ""}
+            onClick={() => navigate("/perfil")}
+          >
             <PerfilIcon /> Perfil
           </button>
           <button onClick={handleSignOut}>
